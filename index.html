@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>北交所3个月持有期同批新发价值对比</title>
+<meta name="description" content="本批8只北交所3个月持有期新发基金同批对比分析：基金公司与基金经理北交所布局、首批产品业绩、托管行维度对比。">
+<style>
+  :root{
+    --ink:#1a1a1a;
+    --ink-2:#4a4a4a;
+    --ink-3:#7a7a7a;
+    --line:#e3e0da;
+    --bg:#f2f1ed;
+    --paper:#ffffff;
+    --red:#a6192e;
+    --red-soft:#c8102e;
+    --gold:#b08d57;
+    --serif:"Songti SC","SimSun","Noto Serif SC",Georgia,"Times New Roman",serif;
+    --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Hiragino Sans GB",sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--sans);
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  /* ---------- 顶部 ---------- */
+  header{
+    background:linear-gradient(160deg,#ffffff 0%,#fbfaf7 60%,#f6f2ea 100%);
+    border-bottom:1px solid var(--line);
+    position:relative;
+    overflow:hidden;
+  }
+  header::before{
+    content:"";
+    position:absolute;inset:0 0 auto 0;height:4px;
+    background:linear-gradient(90deg,var(--red) 0%,var(--red) 35%,var(--gold) 35%,var(--gold) 100%);
+  }
+  header::after{
+    content:"";
+    position:absolute;right:-80px;top:-80px;width:340px;height:340px;border-radius:50%;
+    background:radial-gradient(circle,rgba(176,141,87,.13),rgba(176,141,87,0) 70%);
+    pointer-events:none;
+  }
+  .head-inner{
+    max-width:960px;margin:0 auto;padding:56px 28px 40px;position:relative;
+  }
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:12px;letter-spacing:.18em;color:var(--red);
+    font-weight:600;text-transform:uppercase;
+    border:1px solid rgba(166,25,46,.28);border-radius:2px;
+    padding:5px 12px;background:rgba(166,25,46,.04);
+    margin-bottom:22px;
+  }
+  .eyebrow span.dot{width:5px;height:5px;border-radius:50%;background:var(--red);display:block}
+  h1{
+    font-family:var(--serif);
+    font-size:clamp(26px,4.4vw,42px);
+    line-height:1.28;
+    font-weight:700;
+    letter-spacing:.01em;
+    color:#121212;
+  }
+  h1 em{
+    font-style:normal;
+    position:relative;
+    white-space:nowrap;
+  }
+  h1 em::after{
+    content:"";position:absolute;left:0;right:0;bottom:.04em;height:.34em;
+    background:linear-gradient(90deg,rgba(176,141,87,.42),rgba(176,141,87,.14));
+    z-index:-1;
+  }
+  .lede{
+    margin-top:18px;font-size:15.5px;color:var(--ink-2);max-width:720px;
+  }
+  .meta{
+    margin-top:26px;display:flex;flex-wrap:wrap;gap:10px 26px;
+    padding-top:22px;border-top:1px solid var(--line);
+    font-size:13px;color:var(--ink-3);
+  }
+  .meta b{color:var(--ink);font-weight:600}
+  /* ---------- 工具条 ---------- */
+  .toolbar{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,255,255,.86);
+    backdrop-filter:saturate(180%) blur(14px);
+    -webkit-backdrop-filter:saturate(180%) blur(14px);
+    border-bottom:1px solid var(--line);
+  }
+  .toolbar-inner{
+    max-width:960px;margin:0 auto;padding:10px 28px;
+    display:flex;align-items:center;justify-content:space-between;gap:14px;
+  }
+  .tb-title{font-size:13px;color:var(--ink-2);font-weight:600;letter-spacing:.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .tb-actions{display:flex;gap:10px;flex-shrink:0}
+  .btn{
+    display:inline-flex;align-items:center;gap:7px;
+    font-size:13px;font-weight:600;font-family:var(--sans);
+    padding:8px 15px;border-radius:4px;border:1px solid var(--line);
+    background:#fff;color:var(--ink);cursor:pointer;text-decoration:none;
+    transition:all .18s ease;white-space:nowrap;
+  }
+  .btn:hover{border-color:#cfc9bf;background:#fbfaf7;transform:translateY(-1px)}
+  .btn-primary{background:var(--red);border-color:var(--red);color:#fff}
+  .btn-primary:hover{background:#8e1526;border-color:#8e1526;color:#fff}
+  .btn svg{width:14px;height:14px;flex-shrink:0}
+  /* ---------- 正文 ---------- */
+  main{max-width:960px;margin:0 auto;padding:44px 28px 20px}
+  .sec-label{
+    display:flex;align-items:center;gap:12px;
+    font-size:12px;letter-spacing:.16em;color:var(--ink-3);font-weight:600;
+    margin-bottom:24px;text-transform:uppercase;
+  }
+  .sec-label::after{content:"";flex:1;height:1px;background:var(--line)}
+  .paper{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:3px;
+    box-shadow:0 1px 2px rgba(26,26,26,.04),0 12px 34px -18px rgba(26,26,26,.22);
+    padding:8px;
+    margin-bottom:30px;
+    position:relative;
+    transition:box-shadow .25s ease,transform .25s ease;
+  }
+  .paper:hover{box-shadow:0 2px 4px rgba(26,26,26,.05),0 22px 48px -20px rgba(26,26,26,.28)}
+  .paper img{
+    display:block;width:100%;height:auto;border-radius:2px;cursor:zoom-in;
+    background:#fafafa;
+  }
+  .paper .pager{
+    position:absolute;left:20px;top:20px;
+    background:rgba(26,26,26,.72);color:#fff;
+    font-size:11px;font-weight:600;letter-spacing:.1em;
+    padding:4px 9px;border-radius:2px;pointer-events:none;
+    backdrop-filter:blur(4px);
+  }
+  .hint{
+    display:flex;align-items:center;gap:7px;
+    font-size:12px;color:var(--ink-3);
+    margin:-14px 0 34px;padding-left:2px;
+  }
+  .hint svg{width:13px;height:13px;opacity:.7}
+  /* ---------- 结尾 ---------- */
+  .risk{
+    background:#fff;
+    border:1px solid var(--line);
+    border-left:3px solid var(--gold);
+    border-radius:2px;
+    padding:22px 24px;
+    margin-bottom:36px;
+  }
+  .risk h2{
+    font-size:13px;letter-spacing:.1em;color:var(--ink);margin-bottom:10px;font-weight:700;
+  }
+  .risk p{font-size:12.5px;color:var(--ink-2);line-height:1.85}
+  .risk p + p{margin-top:8px}
+  footer{
+    border-top:1px solid var(--line);
+    padding:26px 28px 44px;
+    text-align:center;
+    font-size:12px;color:var(--ink-3);
+  }
+  footer b{color:var(--ink-2);font-weight:600}
+  /* ---------- 放大查看 ---------- */
+  .lightbox{
+    position:fixed;inset:0;z-index:200;
+    background:rgba(14,14,14,.94);
+    display:none;overflow:auto;
+    padding:24px;
+    -webkit-overflow-scrolling:touch;
+  }
+  .lightbox.on{display:block;animation:fade .22s ease}
+  @keyframes fade{from{opacity:0}to{opacity:1}}
+  .lightbox img{
+    display:block;margin:0 auto;max-width:none;width:min(1400px,100%);
+    box-shadow:0 20px 60px rgba(0,0,0,.5);border-radius:2px;
+  }
+  .lb-close{
+    position:fixed;right:20px;top:18px;
+    width:38px;height:38px;border-radius:50%;
+    background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.24);
+    color:#fff;font-size:19px;line-height:1;cursor:pointer;
+    display:flex;align-items:center;justify-content:center;
+    backdrop-filter:blur(6px);
+  }
+  .lb-close:hover{background:rgba(255,255,255,.24)}
+  @media (max-width:640px){
+    .head-inner{padding:38px 18px 30px}
+    main{padding:30px 14px 10px}
+    .toolbar-inner{padding:9px 14px}
+    .tb-title{display:none}
+    .paper{padding:5px;margin-bottom:20px}
+    .paper .pager{left:11px;top:11px;font-size:10px;padding:3px 7px}
+    .hint{margin:-8px 0 26px}
+    .risk{padding:18px 16px}
+  }
+  @media print{
+    body{background:#fff}
+    header::before,header::after,.toolbar,.hint,.risk,footer{display:none}
+    header{background:#fff;border:none}
+    .head-inner{padding:0 0 14px}
+    .paper{box-shadow:none;border:none;padding:0;margin:0;page-break-after:always}
+    main{padding:0;max-width:none}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="head-inner">
+    <div class="eyebrow"><span class="dot"></span>内部参考 · 渠道支持材料</div>
+    <h1>北交所3个月持有期<em>同批新发价值对比</em></h1>
+    <p class="lede">本批 8 只北交所 3 个月持有期基金同批发行，分属 8 家管理人。报告从基金公司在北交所的布局深度、拟任基金经理历史业绩、首批产品长期表现及托管行竞争维度，逐层拆解同批产品的差异。</p>
+    <div class="meta">
+      <div>共 <b>2</b> 页</div>
+      <div>同批新发 <b>8</b> 只</div>
+      <div>涉及管理人 <b>8</b> 家</div>
+      <div>数据来源 <b>Wind、公开披露</b></div>
+    </div>
+  </div>
+</header>
+
+<div class="toolbar">
+  <div class="toolbar-inner">
+    <div class="tb-title">北交所3个月持有期同批新发价值对比</div>
+    <div class="tb-actions">
+      <button class="btn" id="printBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+        打印
+      </button>
+      <a class="btn btn-primary" href="report.pdf" download="北交所基金同批对比分析报告.pdf">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        下载 PDF
+      </a>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="sec-label">报告全文</div>
+
+  <figure class="paper">
+    <span class="pager">01 / 02</span>
+    <img src="pages/page-1.jpg" alt="报告第1页：核心观点、本批8只新发基金速览、基金公司在北交所的布局情况" loading="eager" decoding="async">
+  </figure>
+
+  <figure class="paper">
+    <span class="pager">02 / 02</span>
+    <img src="pages/page-2.jpg" alt="报告第2页：首批北交所主题基金业绩对比与基金经理维度分析" loading="lazy" decoding="async">
+  </figure>
+
+  <p class="hint">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+    点击任意页面可放大查看原始版式
+  </p>
+
+  <section class="risk">
+    <h2>风险提示</h2>
+    <p>本材料仅供内部交流与渠道研讨使用，不构成任何形式的投资建议或对未来收益的保证。基金过往业绩及其净值高低不预示未来表现，基金管理人管理的其他基金业绩不构成对本基金业绩表现的保证。投资者应认真阅读《基金合同》《招募说明书》《产品资料概要》等法律文件，充分了解基金的风险收益特征，并根据自身风险承受能力谨慎决策。材料中涉及的第三方数据均来源于公开渠道，本公司对其准确性、完整性不作保证。</p>
+    <p>基金有风险，投资须谨慎。</p>
+  </section>
+</main>
+
+<footer>
+  <b>北交所3个月持有期同批新发价值对比</b> · 内部参考材料<br>
+  本页仅用于报告版式展示，正式文本以 PDF 原件为准
+</footer>
+
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lbClose" aria-label="关闭">×</button>
+  <img id="lbImg" src="" alt="放大查看">
+</div>
+
+<script>
+  (function(){
+    var lb = document.getElementById('lightbox');
+    var lbImg = document.getElementById('lbImg');
+    var lbClose = document.getElementById('lbClose');
+
+    document.querySelectorAll('.paper img').forEach(function(img){
+      img.addEventListener('click', function(){
+        lbImg.src = img.currentSrc || img.src;
+        lbImg.alt = img.alt;
+        lb.classList.add('on');
+        lb.scrollTop = 0;
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    function close(){
+      lb.classList.remove('on');
+      lbImg.src = '';
+      document.body.style.overflow = '';
+    }
+    lbClose.addEventListener('click', close);
+    lb.addEventListener('click', function(e){ if(e.target === lb) close(); });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape') close(); });
+
+    document.getElementById('printBtn').addEventListener('click', function(){ window.print(); });
+  })();
+</script>
+</body>
+</html>

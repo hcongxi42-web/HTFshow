@@ -3,304 +3,483 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>北交所3个月持有期同批新发价值对比</title>
-<meta name="description" content="本批8只北交所3个月持有期新发基金同批对比分析：基金公司与基金经理北交所布局、首批产品业绩、托管行维度对比。">
+<title>北交所三个月持有期新发基金同批价值对比</title>
+<meta name="description" content="本批 8 只北交所 3 个月持有期新发基金的同批对比：管理人布局深度、拟任基金经理过往业绩、首批产品长期表现与托管行竞争维度。">
 <style>
   :root{
-    --ink:#1a1a1a;
-    --ink-2:#4a4a4a;
-    --ink-3:#7a7a7a;
-    --line:#e3e0da;
-    --bg:#f2f1ed;
-    --paper:#ffffff;
-    --red:#a6192e;
-    --red-soft:#c8102e;
-    --gold:#b08d57;
-    --serif:"Songti SC","SimSun","Noto Serif SC",Georgia,"Times New Roman",serif;
-    --sans:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","Hiragino Sans GB",sans-serif;
+    --ink:#111111;
+    --ink-2:#3b3b3b;
+    --ink-3:#6d6d6d;
+    --rule:#1a1a1a;
+    --rule-2:#c9c9c9;
+    --accent:#1c3f66;
+    --serif:"Times New Roman",Times,"Songti SC","SimSun","Noto Serif SC",serif;
+    --cn-serif:"Songti SC","SimSun","Times New Roman",serif;
+    --col:880px;
   }
-  *{box-sizing:border-box;margin:0;padding:0}
+  *{margin:0;padding:0;box-sizing:border-box}
   html{-webkit-text-size-adjust:100%}
   body{
-    background:var(--bg);
+    background:#ffffff;
     color:var(--ink);
-    font-family:var(--sans);
-    line-height:1.7;
-    -webkit-font-smoothing:antialiased;
-  }
-  /* ---------- 顶部 ---------- */
-  header{
-    background:linear-gradient(160deg,#ffffff 0%,#fbfaf7 60%,#f6f2ea 100%);
-    border-bottom:1px solid var(--line);
-    position:relative;
-    overflow:hidden;
-  }
-  header::before{
-    content:"";
-    position:absolute;inset:0 0 auto 0;height:4px;
-    background:linear-gradient(90deg,var(--red) 0%,var(--red) 35%,var(--gold) 35%,var(--gold) 100%);
-  }
-  header::after{
-    content:"";
-    position:absolute;right:-80px;top:-80px;width:340px;height:340px;border-radius:50%;
-    background:radial-gradient(circle,rgba(176,141,87,.13),rgba(176,141,87,0) 70%);
-    pointer-events:none;
-  }
-  .head-inner{
-    max-width:960px;margin:0 auto;padding:56px 28px 40px;position:relative;
-  }
-  .eyebrow{
-    display:inline-flex;align-items:center;gap:8px;
-    font-size:12px;letter-spacing:.18em;color:var(--red);
-    font-weight:600;text-transform:uppercase;
-    border:1px solid rgba(166,25,46,.28);border-radius:2px;
-    padding:5px 12px;background:rgba(166,25,46,.04);
-    margin-bottom:22px;
-  }
-  .eyebrow span.dot{width:5px;height:5px;border-radius:50%;background:var(--red);display:block}
-  h1{
     font-family:var(--serif);
-    font-size:clamp(26px,4.4vw,42px);
-    line-height:1.28;
+    font-size:16px;
+    line-height:1.78;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+    overflow-x:hidden;
+  }
+  .wrap{max-width:var(--col);margin:0 auto;padding:0 24px}
+
+  /* ---------------- 刊头 ---------------- */
+  .masthead{
+    border-top:3px solid var(--rule);
+    padding-top:9px;
+    margin-top:34px;
+    border-bottom:1px solid var(--rule);
+    padding-bottom:8px;
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    gap:16px;
+    flex-wrap:wrap;
+  }
+  .imprint{
+    font-size:11.5px;
+    letter-spacing:.16em;
+    color:var(--ink-3);
+    font-family:var(--serif);
+  }
+  .actions{display:flex;gap:18px;align-items:baseline}
+  .act{
+    font-size:12px;
+    letter-spacing:.06em;
+    color:var(--ink-2);
+    text-decoration:none;
+    border-bottom:1px solid var(--rule-2);
+    padding-bottom:1px;
+    background:none;border-top:0;border-left:0;border-right:0;
+    font-family:var(--serif);
+    cursor:pointer;
+    transition:color .15s ease,border-color .15s ease;
+  }
+  .act:hover{color:var(--accent);border-color:var(--accent)}
+
+  /* ---------------- 标题区 ---------------- */
+  .titleblock{padding:44px 0 0}
+  h1{
+    font-family:var(--cn-serif);
     font-weight:700;
+    font-size:clamp(25px,4.2vw,40px);
+    line-height:1.42;
     letter-spacing:.01em;
-    color:#121212;
+    color:#0d0d0d;
   }
-  h1 em{
-    font-style:normal;
-    position:relative;
+  h1 .l2{display:block}
+  .subtitle{
+    margin-top:14px;
+    font-size:13.5px;
+    line-height:1.7;
+    color:var(--ink-3);
+    letter-spacing:.01em;
+  }
+
+  /* ---------------- 摘要 ---------------- */
+  .abstract{
+    margin-top:32px;
+    padding-left:18px;
+    border-left:2px solid var(--accent);
+  }
+  .abstract .label{
+    display:block;
+    font-size:11px;
+    letter-spacing:.22em;
+    color:var(--accent);
+    margin-bottom:8px;
+    font-family:var(--serif);
+  }
+  .abstract p{
+    font-size:15px;
+    line-height:1.92;
+    color:var(--ink-2);
+    text-align:justify;
+  }
+
+  /* ---------------- 分节 ---------------- */
+  section{margin-top:52px}
+  h2{
+    font-family:var(--cn-serif);
+    font-size:15px;
+    font-weight:700;
+    letter-spacing:.08em;
+    color:var(--ink);
+    padding-bottom:7px;
+    border-bottom:1px solid var(--rule);
+    display:flex;
+    align-items:baseline;
+    justify-content:space-between;
+    gap:12px;
+  }
+  h2 .no{
+    font-family:var(--serif);
+    font-size:12px;
+    font-weight:400;
+    letter-spacing:.14em;
+    color:var(--ink-3);
+  }
+
+  /* ---------------- 表 / 图 题 ---------------- */
+  .caption{margin:26px 0 12px}
+  .caption .cno{
+    font-size:12.5px;
+    letter-spacing:.08em;
+    color:var(--ink);
+    font-weight:700;
+    margin-right:10px;
+  }
+  .caption .ctxt{
+    font-size:13.5px;
+    font-weight:700;
+    color:var(--ink);
+  }
+  .caption .csrc{
+    display:block;
+    font-size:12px;
+    color:var(--ink-3);
+    margin-top:3px;
+    font-weight:400;
+    line-height:1.65;
+  }
+
+  /* ---------------- 三线表 ---------------- */
+  .tbl-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+  table.booktabs{
+    width:100%;
+    border-collapse:collapse;
+    border-top:1.4px solid var(--rule);
+    border-bottom:1.4px solid var(--rule);
+    font-size:13.5px;
+    min-width:660px;
+    font-variant-numeric:tabular-nums;
+  }
+  table.booktabs thead th{
+    border-bottom:1px solid var(--rule);
+    padding:9px 10px;
+    text-align:left;
+    font-weight:700;
+    font-size:12.5px;
+    letter-spacing:.02em;
     white-space:nowrap;
-    padding:0 2px;
-    background:linear-gradient(180deg,rgba(176,141,87,0) 58%,rgba(176,141,87,.34) 58%,rgba(176,141,87,.34) 90%,rgba(176,141,87,0) 90%);
+    color:var(--ink);
   }
-  .lede{
-    margin-top:18px;font-size:15.5px;color:var(--ink-2);max-width:720px;
+  table.booktabs tbody td{
+    padding:8px 10px;
+    border-bottom:.5px solid #eaeaea;
+    color:var(--ink-2);
+    vertical-align:top;
   }
-  .meta{
-    margin-top:26px;display:flex;flex-wrap:wrap;gap:10px 26px;
-    padding-top:22px;border-top:1px solid var(--line);
-    font-size:13px;color:var(--ink-3);
+  table.booktabs tbody tr:last-child td{border-bottom:0}
+  table.booktabs tbody tr.lead td{color:var(--ink);font-weight:700}
+  table.booktabs td.num,table.booktabs th.num{text-align:right;font-variant-numeric:tabular-nums}
+  table.booktabs td.code{font-variant-numeric:tabular-nums;white-space:nowrap;letter-spacing:.01em}
+  .yes{color:var(--accent);font-weight:700}
+  .tbl-note{
+    font-size:12px;
+    color:var(--ink-3);
+    margin-top:9px;
+    line-height:1.7;
   }
-  .meta b{color:var(--ink);font-weight:600}
-  /* ---------- 工具条 ---------- */
-  .toolbar{
-    position:sticky;top:0;z-index:50;
-    background:rgba(255,255,255,.86);
-    backdrop-filter:saturate(180%) blur(14px);
-    -webkit-backdrop-filter:saturate(180%) blur(14px);
-    border-bottom:1px solid var(--line);
-  }
-  .toolbar-inner{
-    max-width:960px;margin:0 auto;padding:10px 28px;
-    display:flex;align-items:center;justify-content:space-between;gap:14px;
-  }
-  .tb-title{font-size:13px;color:var(--ink-2);font-weight:600;letter-spacing:.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .tb-actions{display:flex;gap:10px;flex-shrink:0}
-  .btn{
-    display:inline-flex;align-items:center;gap:7px;
-    font-size:13px;font-weight:600;font-family:var(--sans);
-    padding:8px 15px;border-radius:4px;border:1px solid var(--line);
-    background:#fff;color:var(--ink);cursor:pointer;text-decoration:none;
-    transition:all .18s ease;white-space:nowrap;
-  }
-  .btn:hover{border-color:#cfc9bf;background:#fbfaf7;transform:translateY(-1px)}
-  .btn-primary{background:var(--red);border-color:var(--red);color:#fff}
-  .btn-primary:hover{background:#8e1526;border-color:#8e1526;color:#fff}
-  .btn svg{width:14px;height:14px;flex-shrink:0}
-  /* ---------- 正文 ---------- */
-  main{max-width:960px;margin:0 auto;padding:44px 28px 20px}
-  .sec-label{
-    display:flex;align-items:center;gap:12px;
-    font-size:12px;letter-spacing:.16em;color:var(--ink-3);font-weight:600;
-    margin-bottom:24px;text-transform:uppercase;
-  }
-  .sec-label::after{content:"";flex:1;height:1px;background:var(--line)}
-  .paper{
-    background:var(--paper);
-    border:1px solid var(--line);
-    border-radius:3px;
-    box-shadow:0 1px 2px rgba(26,26,26,.04),0 12px 34px -18px rgba(26,26,26,.22);
-    padding:8px;
-    margin-bottom:30px;
-    position:relative;
-    transition:box-shadow .25s ease,transform .25s ease;
-  }
-  .paper:hover{box-shadow:0 2px 4px rgba(26,26,26,.05),0 22px 48px -20px rgba(26,26,26,.28)}
-  .paper img{
-    display:block;width:100%;height:auto;border-radius:2px;cursor:zoom-in;
-    background:#fafafa;
-  }
-  .paper .pager{
-    position:absolute;left:20px;top:20px;
-    background:rgba(26,26,26,.72);color:#fff;
-    font-size:11px;font-weight:600;letter-spacing:.1em;
-    padding:4px 9px;border-radius:2px;pointer-events:none;
-    backdrop-filter:blur(4px);
-  }
-  .hint{
-    display:flex;align-items:center;gap:7px;
-    font-size:12px;color:var(--ink-3);
-    margin:-14px 0 34px;padding-left:2px;
-  }
-  .hint svg{width:13px;height:13px;opacity:.7}
-  /* ---------- 结尾 ---------- */
-  .risk{
+
+  /* ---------------- 图 ---------------- */
+  figure{margin:0}
+  figure .plate{
+    border:1px solid var(--rule-2);
+    line-height:0;
     background:#fff;
-    border:1px solid var(--line);
-    border-left:3px solid var(--gold);
-    border-radius:2px;
-    padding:22px 24px;
-    margin-bottom:36px;
   }
-  .risk h2{
-    font-size:13px;letter-spacing:.1em;color:var(--ink);margin-bottom:10px;font-weight:700;
+  figure img{
+    display:block;
+    width:100%;
+    height:auto;
+    cursor:zoom-in;
   }
-  .risk p{font-size:12.5px;color:var(--ink-2);line-height:1.85}
-  .risk p + p{margin-top:8px}
+  .zoomhint{
+    font-size:12px;
+    color:var(--ink-3);
+    margin-top:10px;
+    letter-spacing:.02em;
+  }
+  .zoomhint a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--rule-2)}
+
+  /* ---------------- 说明 / 风险提示 ---------------- */
+  .notes{
+    margin-top:56px;
+    padding-top:16px;
+    border-top:1px solid var(--rule);
+  }
+  .notes h3{
+    font-family:var(--cn-serif);
+    font-size:12.5px;
+    letter-spacing:.14em;
+    font-weight:700;
+    margin-bottom:10px;
+  }
+  .notes p{
+    font-size:12.5px;
+    line-height:1.9;
+    color:var(--ink-2);
+    text-align:justify;
+  }
+  .notes p + p{margin-top:7px}
+
   footer{
-    border-top:1px solid var(--line);
-    padding:26px 28px 44px;
-    text-align:center;
-    font-size:12px;color:var(--ink-3);
+    margin-top:44px;
+    padding:16px 0 54px;
+    border-top:1px solid var(--rule-2);
+    font-size:11.5px;
+    color:var(--ink-3);
+    display:flex;
+    justify-content:space-between;
+    gap:16px;
+    flex-wrap:wrap;
+    letter-spacing:.02em;
   }
-  footer b{color:var(--ink-2);font-weight:600}
-  /* ---------- 放大查看 ---------- */
-  .lightbox{
-    position:fixed;inset:0;z-index:200;
-    background:rgba(14,14,14,.94);
+
+  /* ---------------- 放大查看 ---------------- */
+  .viewer{
+    position:fixed;inset:0;background:#fbfbfa;z-index:200;
     display:none;overflow:auto;
-    padding:24px;
-    -webkit-overflow-scrolling:touch;
   }
-  .lightbox.on{display:block;animation:fade .22s ease}
-  @keyframes fade{from{opacity:0}to{opacity:1}}
-  .lightbox img{
-    display:block;margin:0 auto;max-width:none;width:min(1400px,100%);
-    box-shadow:0 20px 60px rgba(0,0,0,.5);border-radius:2px;
+  .viewer.on{display:block}
+  .viewer .vbar{
+    position:sticky;top:0;background:#fff;
+    border-bottom:1px solid var(--rule);
+    padding:8px 20px;
+    display:flex;align-items:baseline;justify-content:space-between;gap:16px;
   }
-  .lb-close{
-    position:fixed;right:20px;top:18px;
-    width:38px;height:38px;border-radius:50%;
-    background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.24);
-    color:#fff;font-size:19px;line-height:1;cursor:pointer;
-    display:flex;align-items:center;justify-content:center;
-    backdrop-filter:blur(6px);
-  }
-  .lb-close:hover{background:rgba(255,255,255,.24)}
+  .vbar .vt{font-size:12px;letter-spacing:.1em;color:var(--ink-3)}
+  .viewer img{display:block;width:100%;max-width:1800px;margin:0 auto;height:auto}
+
   @media (max-width:640px){
-    .head-inner{padding:38px 18px 30px}
-    main{padding:30px 14px 10px}
-    .toolbar-inner{padding:9px 14px}
-    .tb-title{display:none}
-    .paper{padding:5px;margin-bottom:20px}
-    .paper .pager{left:11px;top:11px;font-size:10px;padding:3px 7px}
-    .hint{margin:-8px 0 26px}
-    .risk{padding:18px 16px}
+    body{font-size:15px}
+    .wrap{padding:0 18px}
+    .masthead{margin-top:20px;flex-direction:column;align-items:flex-start;gap:9px}
+    .actions{gap:16px}
+    .titleblock{padding-top:30px}
+    .subtitle{font-size:12.5px;line-height:1.7}
+    .abstract{padding-left:14px}
+    .abstract p{font-size:14px;line-height:1.9}
+    section{margin-top:40px}
+    table.booktabs{min-width:560px;font-size:12.5px}
+    table.booktabs thead th,table.booktabs tbody td{padding:7px 8px}
+    footer{flex-direction:column;gap:6px}
+    .viewer img{max-width:none;width:auto;min-width:100%}
   }
   @media print{
-    body{background:#fff}
-    header::before,header::after,.toolbar,.hint,.risk,footer{display:none}
-    header{background:#fff;border:none}
-    .head-inner{padding:0 0 14px}
-    .paper{box-shadow:none;border:none;padding:0;margin:0;page-break-after:always}
-    main{padding:0;max-width:none}
+    .masthead .actions,.zoomhint,.viewer{display:none}
+    body{font-size:11pt}
+    section{page-break-inside:avoid}
+    figure .plate{border:none}
+    a{color:#000;text-decoration:none}
   }
 </style>
 </head>
 <body>
 
-<header>
-  <div class="head-inner">
-    <div class="eyebrow"><span class="dot"></span>内部参考 · 渠道支持材料</div>
-    <h1>北交所3个月持有期<em>同批新发价值对比</em></h1>
-    <p class="lede">本批 8 只北交所 3 个月持有期基金同批发行，分属 8 家管理人。报告从基金公司在北交所的布局深度、拟任基金经理历史业绩、首批产品长期表现及托管行竞争维度，逐层拆解同批产品的差异。</p>
-    <div class="meta">
-      <div>共 <b>2</b> 页</div>
-      <div>同批新发 <b>8</b> 只</div>
-      <div>涉及管理人 <b>8</b> 家</div>
-      <div>数据来源 <b>Wind、公开披露</b></div>
-    </div>
-  </div>
-</header>
+<div class="wrap">
 
-<div class="toolbar">
-  <div class="toolbar-inner">
-    <div class="tb-title">北交所3个月持有期同批新发价值对比</div>
-    <div class="tb-actions">
-      <button class="btn" id="printBtn">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
-        打印
-      </button>
-      <a class="btn btn-primary" href="report.pdf" download="北交所基金同批对比分析报告.pdf">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        下载 PDF
-      </a>
+  <div class="masthead">
+    <div class="imprint">内部研究材料 · 渠道支持 · 不发散</div>
+    <div class="actions">
+      <button class="act" id="printBtn">打印</button>
+      <a class="act" href="report.pdf" download="北交所基金同批对比分析报告.pdf">下载 PDF 原件</a>
     </div>
   </div>
+
+  <div class="titleblock">
+    <h1>北交所三个月持有期新发基金<span class="l2">同批价值对比</span></h1>
+    <p class="subtitle">（样本：本批 8 只北交所 3 个月持有期新发基金，分属 8 家管理人；数据来源：Wind、公开披露，业绩截至 2026 年 9 月 16 日）</p>
+  </div>
+
+  <div class="abstract">
+    <span class="label">摘要 · ABSTRACT</span>
+    <p>本批产品同批发行、同属北交所 3 个月持有期主动权益，差异主要来自管理人而非产品结构。判断价值需从三层证据展开：一是基金公司在北交所的布局深度，二是拟任基金经理可查的过往业绩，三是首批北交所主题基金的长期结果。三线并进的机构在同批竞争中具备更扎实的配置逻辑，而历史业绩的分化幅度远大于布局年限的差异。</p>
+  </div>
+
+  <section>
+    <h2><span>一、同批产品速览</span><span class="no">TAB. 1</span></h2>
+
+    <div class="caption">
+      <span class="cno">表 1</span><span class="ctxt">本批 8 只基金分属 8 家管理人，托管行集中于中国银行与农业银行</span>
+      <span class="csrc">（数据来源：Wind、公开披露；代码栏为 A / C 份额，东财基金仅披露单一份额）</span>
+    </div>
+
+    <div class="tbl-scroll">
+      <table class="booktabs">
+        <thead>
+          <tr>
+            <th class="num" style="width:40px">序号</th>
+            <th>基金管理人</th>
+            <th>基金全称</th>
+            <th>代码（A/C）</th>
+            <th>托管人</th>
+            <th>基金经理</th>
+            <th>北交所主动产品经验</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="lead">
+            <td class="num">1</td>
+            <td>汇添富基金</td>
+            <td>北交所精选 3 个月持有期混合</td>
+            <td class="code">029133 / 029134</td>
+            <td>中国银行</td>
+            <td>马磊</td>
+            <td class="yes">有</td>
+          </tr>
+          <tr>
+            <td class="num">2</td>
+            <td>易方达基金</td>
+            <td>北交所优选 3 个月持有期混合</td>
+            <td class="code">029127 / 029128</td>
+            <td>招商银行</td>
+            <td>张琦、邱天蓝</td>
+            <td class="yes">有</td>
+          </tr>
+          <tr>
+            <td class="num">3</td>
+            <td>富国基金</td>
+            <td>北交所精选 3 个月持有期混合</td>
+            <td class="code">029137 / 029138</td>
+            <td>中国工商银行</td>
+            <td>孟浩之</td>
+            <td>无</td>
+          </tr>
+          <tr>
+            <td class="num">4</td>
+            <td>中信建投基金</td>
+            <td>北交所优选 3 个月持有期混合</td>
+            <td class="code">029154 / 029155</td>
+            <td>中信银行</td>
+            <td>冷文鹏</td>
+            <td class="yes">有</td>
+          </tr>
+          <tr>
+            <td class="num">5</td>
+            <td>东财基金</td>
+            <td>北交所智选三个月持有期混合</td>
+            <td class="code">029202</td>
+            <td>国信证券</td>
+            <td>未公开披露</td>
+            <td>无</td>
+          </tr>
+          <tr>
+            <td class="num">6</td>
+            <td>南方基金</td>
+            <td>北交所 3 个月持有期混合</td>
+            <td class="code">029129 / 029130</td>
+            <td>中国农业银行</td>
+            <td>未公开披露</td>
+            <td class="yes">有</td>
+          </tr>
+          <tr>
+            <td class="num">7</td>
+            <td>嘉实基金</td>
+            <td>北交所 3 个月持有期混合</td>
+            <td class="code">029135 / 029136</td>
+            <td>中国农业银行</td>
+            <td>未公开披露</td>
+            <td class="yes">有</td>
+          </tr>
+          <tr>
+            <td class="num">8</td>
+            <td>华夏基金</td>
+            <td>北交所优选 3 个月持有期混合</td>
+            <td class="code">029139 / 029140</td>
+            <td>中国银行</td>
+            <td>顾鑫峰</td>
+            <td class="yes">有</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="tbl-note">注：本批 8 只基金同批获批发行。其中 6 家管理人已有北交所偏股产品，富国、东财此前仅通过北证 50 指数产品参与，孟浩之自 2026 年 9 月起首次涉足北交所主动管理。</p>
+  </section>
+
+  <section>
+    <h2><span>二、报告原文</span><span class="no">FIG. 1 – 2</span></h2>
+
+    <figure>
+      <div class="caption">
+        <span class="cno">图 1</span><span class="ctxt">汇添富在同托管行对比中具备产品线与历史业绩的双重优势</span>
+        <span class="csrc">（原报告第 1 页：核心观点、本批 8 只新发基金速览、基金公司在北交所的布局情况；数据来源：Wind）</span>
+      </div>
+      <div class="plate">
+        <img src="pages/page-1.png" width="2700" height="3901" alt="报告第 1 页：核心观点、本批 8 只新发基金速览、基金公司在北交所的布局情况">
+      </div>
+    </figure>
+
+    <figure style="margin-top:46px">
+      <div class="caption">
+        <span class="cno">图 2</span><span class="ctxt">首批 8 只北交所主题基金成立以来业绩高度分化，汇添富为唯一翻倍基</span>
+        <span class="csrc">（原报告第 2 页：首批产品业绩排名、基金经理过往产品业绩、与华夏基金的深度对比；数据来源：Wind，截至 2026 年 9 月 16 日）</span>
+      </div>
+      <div class="plate">
+        <img src="pages/page-2.png" width="2700" height="3901" alt="报告第 2 页：首批北交所主题基金业绩对比与基金经理维度分析">
+      </div>
+    </figure>
+
+    <p class="zoomhint">点击任一页面可在原尺寸下查看，或<a href="report.pdf" target="_blank" rel="noopener">直接打开 PDF 原件</a>（矢量版式，可任意缩放）。</p>
+  </section>
+
+  <div class="notes">
+    <h3>风险提示</h3>
+    <p>本材料仅供内部交流与渠道研讨使用，不构成任何形式的投资建议或对未来收益的保证。基金过往业绩及其净值高低不预示未来表现，基金管理人管理的其他基金业绩不构成对本基金业绩表现的保证。投资者应认真阅读《基金合同》《招募说明书》《产品资料概要》等法律文件，充分了解基金的风险收益特征，并根据自身风险承受能力谨慎决策。</p>
+    <p>材料中涉及的第三方数据均来源于公开渠道，本公司对其准确性、完整性不作保证。基金有风险，投资须谨慎。</p>
+  </div>
+
+  <footer>
+    <span>北交所三个月持有期新发基金同批价值对比 · 内部参考</span>
+    <span>报告版式展示页，正式文本以 PDF 原件为准</span>
+  </footer>
+
 </div>
 
-<main>
-  <div class="sec-label">报告全文</div>
-
-  <figure class="paper">
-    <span class="pager">01 / 02</span>
-    <img src="pages/page-1.jpg" alt="报告第1页：核心观点、本批8只新发基金速览、基金公司在北交所的布局情况" loading="eager" decoding="async">
-  </figure>
-
-  <figure class="paper">
-    <span class="pager">02 / 02</span>
-    <img src="pages/page-2.jpg" alt="报告第2页：首批北交所主题基金业绩对比与基金经理维度分析" loading="lazy" decoding="async">
-  </figure>
-
-  <p class="hint">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
-    点击任意页面可放大查看原始版式
-  </p>
-
-  <section class="risk">
-    <h2>风险提示</h2>
-    <p>本材料仅供内部交流与渠道研讨使用，不构成任何形式的投资建议或对未来收益的保证。基金过往业绩及其净值高低不预示未来表现，基金管理人管理的其他基金业绩不构成对本基金业绩表现的保证。投资者应认真阅读《基金合同》《招募说明书》《产品资料概要》等法律文件，充分了解基金的风险收益特征，并根据自身风险承受能力谨慎决策。材料中涉及的第三方数据均来源于公开渠道，本公司对其准确性、完整性不作保证。</p>
-    <p>基金有风险，投资须谨慎。</p>
-  </section>
-</main>
-
-<footer>
-  <b>北交所3个月持有期同批新发价值对比</b> · 内部参考材料<br>
-  本页仅用于报告版式展示，正式文本以 PDF 原件为准
-</footer>
-
-<div class="lightbox" id="lightbox">
-  <button class="lb-close" id="lbClose" aria-label="关闭">×</button>
-  <img id="lbImg" src="" alt="放大查看">
+<div class="viewer" id="viewer">
+  <div class="vbar">
+    <span class="vt" id="vTitle">原尺寸查看</span>
+    <button class="act" id="vClose">关闭</button>
+  </div>
+  <img id="vImg" src="" alt="">
 </div>
 
 <script>
-  (function(){
-    var lb = document.getElementById('lightbox');
-    var lbImg = document.getElementById('lbImg');
-    var lbClose = document.getElementById('lbClose');
+(function(){
+  var v = document.getElementById('viewer');
+  var vImg = document.getElementById('vImg');
+  var vTitle = document.getElementById('vTitle');
 
-    document.querySelectorAll('.paper img').forEach(function(img){
-      img.addEventListener('click', function(){
-        lbImg.src = img.currentSrc || img.src;
-        lbImg.alt = img.alt;
-        lb.classList.add('on');
-        lb.scrollTop = 0;
-        document.body.style.overflow = 'hidden';
-      });
+  document.querySelectorAll('figure img').forEach(function(img){
+    img.addEventListener('click', function(){
+      vImg.src = img.currentSrc || img.src;
+      vImg.alt = img.alt;
+      vTitle.textContent = img.alt.split('：')[0] || '原尺寸查看';
+      v.classList.add('on');
+      v.scrollTop = 0;
+      document.body.style.overflow = 'hidden';
     });
+  });
 
-    function close(){
-      lb.classList.remove('on');
-      lbImg.src = '';
-      document.body.style.overflow = '';
-    }
-    lbClose.addEventListener('click', close);
-    lb.addEventListener('click', function(e){ if(e.target === lb) close(); });
-    document.addEventListener('keydown', function(e){ if(e.key === 'Escape') close(); });
+  function close(){
+    v.classList.remove('on');
+    vImg.src = '';
+    document.body.style.overflow = '';
+  }
+  document.getElementById('vClose').addEventListener('click', close);
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') close(); });
 
-    document.getElementById('printBtn').addEventListener('click', function(){ window.print(); });
-  })();
+  document.getElementById('printBtn').addEventListener('click', function(){ window.print(); });
+})();
 </script>
 </body>
 </html>
